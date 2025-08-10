@@ -1,0 +1,207 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+/* Custom styles for image analysis */
+.image-upload-area {
+  border: 2px dashed #dee2e6;
+  border-radius: 0.375rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.image-upload-area:hover {
+  border-color: #6c757d;
+  background-color: #f8f9fa;
+}
+
+.image-upload-area.dragover {
+  border-color: #0d6efd;
+  background-color: #e7f1ff;
+}
+
+#imagePreview img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.analysis-results {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.bounding-box-canvas {
+  pointer-events: none;
+}
+
+.card {
+  border: none;
+  border-radius: 0.75rem;
+}
+
+.card-header {
+  border-radius: 0.75rem 0.75rem 0 0 !important;
+  font-weight: 600;
+}
+
+.badge {
+  font-size: 0.75em;
+}
+
+.list-group-item {
+  border-left: none;
+  border-right: none;
+}
+
+.list-group-item:first-child {
+  border-top: none;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+/* Loading animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.analysis-results {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* SignalR specific styles */
+.progress-bar-animated {
+  animation: progress-bar-stripes 1s linear infinite;
+}
+
+@keyframes progress-bar-stripes {
+  0% { background-position: 1rem 0; }
+  100% { background-position: 0 0; }
+}
+
+.alert {
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.alert-info {
+  background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+  color: #0c5460;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  color: #155724;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+  color: #721c24;
+}
+
+/* Button states for SignalR interactions */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-success:disabled {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-primary:disabled {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+/* Real-time status indicators */
+.status-connecting {
+  color: #ffc107;
+}
+
+.status-connected {
+  color: #28a745;
+}
+
+.status-disconnected {
+  color: #dc3545;
+}
+
+/* Canvas overlay for bounding boxes */
+#boundingBoxCanvas {
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Progress container styling */
+#progressContainer {
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+}
+
+.progress {
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  border-radius: 0.75rem;
+  transition: width 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  #imagePreview img {
+    max-height: 200px;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .btn-lg {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+}

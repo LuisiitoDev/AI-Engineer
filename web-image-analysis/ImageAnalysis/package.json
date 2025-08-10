@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@microsoft/signalr": "^9.0.6",
+    "typescript": "^5.9.2"
+  }
+}

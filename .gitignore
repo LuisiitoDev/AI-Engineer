@@ -41,3 +41,9 @@ env/
 .DS_Store
 Thumbs.db
 /.vs
+/web-image-analysis/ImageAnalysis/.vs/ImageAnalysis
+/web-image-analysis/ImageAnalysis/obj
+/web-image-analysis/ImageAnalysis/.vs
+/web-image-analysis/ImageAnalysis/bin/Debug/net9.0
+/web-image-analysis/ImageAnalysis/node_modules
+/web-image-analysis/ImageAnalysis/package-lock.json

@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "rootDir": "./",
+    "skipLibCheck": true,
+    "lib": [ "es2015", "dom" ],
+    "outDir": "wwwroot/js"
+  },
+  "include": [ "**/*.ts" ],
+  "exclude": [ "node_modules" ]
+}
+//{
+//  "compilerOptions": {
+//    "target": "es2017",
+//    "module": "es2015",
+//    "moduleResolution": "node",
+//    "strict": true,
+//    "esModuleInterop": true,
+//    "lib": [ "es2017", "dom" ],
+//    "outDir": "wwwroot/js",
+//    "skipLibCheck": true
+//  },
+//  "include": [ "**/*.ts" ],
+//  "exclude": [ "node_modules" ]
+//}
