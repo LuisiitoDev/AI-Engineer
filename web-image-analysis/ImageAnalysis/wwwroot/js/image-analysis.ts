@@ -6,8 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .build();
 
     connection.on('ReceiveAnalysis', async (data: any) => {
-        console.log(data);
-
         const img = document.getElementById('analyzedImage') as HTMLImageElement;
         const canvas = document.getElementById('boundingBoxCanvas') as HTMLCanvasElement;
         const ctx = canvas?.getContext('2d');
@@ -57,6 +55,37 @@ document.addEventListener('DOMContentLoaded', () => {
                         ctx.strokeRect(x, y, w, h);
                         ctx.fillText('Person', x, Math.max(10, y - 5));
                     }
+                });
+            }
+            console.log(result);
+            const read = result.read?.blocks ?? [];
+            if (read.length > 0) {
+
+                ctx.strokeStyle = '#00FF00';
+                ctx.fillStyle = '#00FF00';
+
+
+                read.forEach((text: any) => {
+                    text.lines.forEach((line: any) => {
+                        console.log(line);
+                        const rawPoints = line.boundingPolygon; // e.g. [x1, y1, x2, y2, ...]
+                        const points = [];
+
+                        for (let i = 0; i < rawPoints.length; i += 2) {
+                            points.push({
+                                x: rawPoints[i].x * scaleX,
+                                y: rawPoints[i + 1].y * scaleY
+                            });
+                        }
+
+                        ctx.beginPath();
+                        ctx.moveTo(points[0].x, points[0].y);
+                        for (let i = 1; i < points.length; i++) {
+                            ctx.lineTo(points[i].x, points[i].y);
+                        }
+                        ctx.closePath();
+                        ctx.stroke();
+                    });
                 });
             }
 

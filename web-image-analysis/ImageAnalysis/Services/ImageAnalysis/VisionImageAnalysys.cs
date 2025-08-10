@@ -23,7 +23,8 @@ public class VisionImageAnalysys(IOptionsMonitor<AzureVision> options) : IVision
                                             VisualFeatures.DenseCaptions |
                                             VisualFeatures.Tags |
                                             VisualFeatures.Objects |
-                                            VisualFeatures.People,
+                                            VisualFeatures.People |
+                                            VisualFeatures.Read,
                             new ImageAnalysisOptions() { GenderNeutralCaption = true });
 
         return result;

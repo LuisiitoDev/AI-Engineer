@@ -42,12 +42,11 @@ document.addEventListener('DOMContentLoaded', function () {
         .withUrl('/analysisHub')
         .build();
     connection.on('ReceiveAnalysis', function (data) { return __awaiter(void 0, void 0, void 0, function () {
-        var img, canvas, ctx, waitForImage, ready, result, result, rect, scaleX_1, scaleY_1, people, detailsHtml;
-        var _a, _b, _c, _d, _e, _f;
-        return __generator(this, function (_g) {
-            switch (_g.label) {
+        var img, canvas, ctx, waitForImage, ready, result, result, rect, scaleX_1, scaleY_1, people, read, detailsHtml;
+        var _a, _b, _c, _d, _e, _f, _g, _h;
+        return __generator(this, function (_j) {
+            switch (_j.label) {
                 case 0:
-                    console.log(data);
                     img = document.getElementById('analyzedImage');
                     canvas = document.getElementById('boundingBoxCanvas');
                     ctx = canvas === null || canvas === void 0 ? void 0 : canvas.getContext('2d');
@@ -68,12 +67,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                     return [4 /*yield*/, ready];
                 case 1:
-                    _g.sent();
+                    _j.sent();
                     return [3 /*break*/, 4];
                 case 2: return [4 /*yield*/, waitForImage()];
                 case 3:
-                    _g.sent();
-                    _g.label = 4;
+                    _j.sent();
+                    _j.label = 4;
                 case 4:
                     if (data.analysisResult && canvas && ctx) {
                         result = data.analysisResult;
@@ -98,17 +97,43 @@ document.addEventListener('DOMContentLoaded', function () {
                                 }
                             });
                         }
+                        console.log(result);
+                        read = (_d = (_c = result.read) === null || _c === void 0 ? void 0 : _c.blocks) !== null && _d !== void 0 ? _d : [];
+                        if (read.length > 0) {
+                            ctx.strokeStyle = '#00FF00';
+                            ctx.fillStyle = '#00FF00';
+                            read.forEach(function (text) {
+                                text.lines.forEach(function (line) {
+                                    console.log(line);
+                                    var rawPoints = line.boundingPolygon; // e.g. [x1, y1, x2, y2, ...]
+                                    var points = [];
+                                    for (var i = 0; i < rawPoints.length; i += 2) {
+                                        points.push({
+                                            x: rawPoints[i].x * scaleX_1,
+                                            y: rawPoints[i + 1].y * scaleY_1
+                                        });
+                                    }
+                                    ctx.beginPath();
+                                    ctx.moveTo(points[0].x, points[0].y);
+                                    for (var i = 1; i < points.length; i++) {
+                                        ctx.lineTo(points[i].x, points[i].y);
+                                    }
+                                    ctx.closePath();
+                                    ctx.stroke();
+                                });
+                            });
+                        }
                         detailsHtml = '';
                         if (result.caption) {
                             detailsHtml += "<div><strong>Caption:</strong> ".concat(result.caption.text, " (Confidence: ").concat(Number(result.caption.confidence).toFixed(2), ")</div>");
                         }
-                        if (((_d = (_c = result.tags) === null || _c === void 0 ? void 0 : _c.values) === null || _d === void 0 ? void 0 : _d.length) > 0) {
+                        if (((_f = (_e = result.tags) === null || _e === void 0 ? void 0 : _e.values) === null || _f === void 0 ? void 0 : _f.length) > 0) {
                             detailsHtml += '<div><strong>Tags:</strong> ' + result.tags.values.map(function (t) { return t.name; }).join(', ') + '</div>';
                         }
                         document.getElementById('analysisDetails').innerHTML = detailsHtml;
                     }
-                    (_e = document.getElementById('loadingIcon')) === null || _e === void 0 ? void 0 : _e.classList.add('d-none');
-                    (_f = document.getElementById('searchIcon')) === null || _f === void 0 ? void 0 : _f.classList.remove('d-none');
+                    (_g = document.getElementById('loadingIcon')) === null || _g === void 0 ? void 0 : _g.classList.add('d-none');
+                    (_h = document.getElementById('searchIcon')) === null || _h === void 0 ? void 0 : _h.classList.remove('d-none');
                     document.getElementById('submitText').textContent = 'Analyze Image';
                     document.getElementById('submitBtn').disabled = false;
                     return [2 /*return*/];
