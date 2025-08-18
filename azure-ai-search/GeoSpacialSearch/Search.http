@@ -1,0 +1,3 @@
+@host=http://localhost:5164
+
+GET {{host}}/Search?q=coffee

@@ -47,3 +47,75 @@ Thumbs.db
 /web-image-analysis/ImageAnalysis/bin/Debug/net9.0
 /web-image-analysis/ImageAnalysis/node_modules
 /web-image-analysis/ImageAnalysis/package-lock.json
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Others
+*.log
+*.vspscc
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.ipdb
+*.iobj
+*.tmp
+*.tmp_proj
+*.log
+*.vsix
+*.dbmdl
+*.bak
+*.backup
+*.cache
+*.class
+*.dll
+*.exe
+*.manifest
+*.resources
+*.resx
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.user
+*.pfx
+*.publishsettings
+*.pubxml
+*.pubxml.user

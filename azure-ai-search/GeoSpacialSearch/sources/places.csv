@@ -1,0 +1,9 @@
+id,name,description,category,latitude,longitude,tags
+1,Café Britt,"Coffee tour near Heredia, great for families.",Café,9.9986,-84.1165,"coffee;tour;family"
+2,Teatro Nacional,"Historic theatre in downtown San José.",Culture,9.933,-84.078,"theatre;historic;art"
+3,Parque Nacional Volcán Poás,"Volcano park with hiking trails and viewpoint.",Nature,10.203,-84.231,"volcano;hiking;nature;family"
+4,Mercado Central de San José,"Traditional market with local food and souvenirs.",Market,9.934,-84.075,"food;souvenirs;local"
+5,Museo de Oro Precolombino,"Museum showcasing pre-Columbian gold artifacts.",Museum,9.933,-84.081,"museum;history;art"
+6,Playa Manuel Antonio,"Beautiful beach with tropical surroundings.",Beach,9.389,-84.140,"beach;nature;relax;tourism"
+7,Catarata La Paz,"Waterfall park with trails and wildlife.",Nature,10.021,-84.033,"waterfall;hiking;nature;family"
+8,Parque Central Cartago,"Historic central park in Cartago with cathedral nearby.",Culture,9.864,-83.919,"park;historic;cathedral"

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "1",
+    "name": "Café Britt",
+    "description": "Coffee tour near Heredia, great for families.",
+    "category": "Café",
+    "location": { "type": "Point", "coordinates": [-84.1165, 9.9986] },
+    "tags": ["coffee", "tour", "family"]
+  },
+  {
+    "id": "2",
+    "name": "Teatro Nacional",
+    "description": "Historic theatre in downtown San José.",
+    "category": "Culture",
+    "location": { "type": "Point", "coordinates": [-84.078, 9.933] },
+    "tags": ["theatre", "historic", "art"]
+  },
+  {
+    "id": "3",
+    "name": "Parque Nacional Volcán Poás",
+    "description": "Volcano park with hiking trails and viewpoint.",
+    "category": "Nature",
+    "location": { "type": "Point", "coordinates": [-84.231, 10.203] },
+    "tags": ["volcano", "hiking", "nature", "family"]
+  },
+  {
+    "id": "4",
+    "name": "Mercado Central de San José",
+    "description": "Traditional market with local food and souvenirs.",
+    "category": "Market",
+    "location": { "type": "Point", "coordinates": [-84.075, 9.934] },
+    "tags": ["food", "souvenirs", "local"]
+  },
+  {
+    "id": "5",
+    "name": "Museo de Oro Precolombino",
+    "description": "Museum showcasing pre-Columbian gold artifacts.",
+    "category": "Museum",
+    "location": { "type": "Point", "coordinates": [-84.081, 9.933] },
+    "tags": ["museum", "history", "art"]
+  },
+  {
+    "id": "6",
+    "name": "Playa Manuel Antonio",
+    "description": "Beautiful beach with tropical surroundings.",
+    "category": "Beach",
+    "location": { "type": "Point", "coordinates": [-84.140, 9.389] },
+    "tags": ["beach", "nature", "relax", "tourism"]
+  },
+  {
+    "id": "7",
+    "name": "Catarata La Paz",
+    "description": "Waterfall park with trails and wildlife.",
+    "category": "Nature",
+    "location": { "type": "Point", "coordinates": [-84.033, 10.021] },
+    "tags": ["waterfall", "hiking", "nature", "family"]
+  },
+  {
+    "id": "8",
+    "name": "Parque Central Cartago",
+    "description": "Historic central park in Cartago with cathedral nearby.",
+    "category": "Culture",
+    "location": { "type": "Point", "coordinates": [-83.919, 9.864] },
+    "tags": ["park", "historic", "cathedral"]
+  }
+]
